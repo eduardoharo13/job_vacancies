@@ -18,7 +18,7 @@ if 'empleos_df_final' not in st.session_state:
 # --- DEFINITION OF REQUESTED ANALYSIS GROUPS ---
 
 GROUP_A_COLS = ['region', 'sector', 'minimum_qualification_final']
-GROUP_B_COLS = ['esco_skill', 'esco_broader_skill', 'esco_skill_broader_hierarchy', 
+GROUP_B_COLS = ['esco_skill', 'esco_broader_skill_fn', 'esco_skill_broader_hierarchy_fn',
                 'at_least_one_skill_type_skill', 'at_least_one_skill_type_knowledge', 
                 'at_least_one_skill_reuse_cross_sector', 'at_least_one_skill_reuse_sect_spec', 
                 'at_least_one_skill_reuse_occup_spec', 'at_least_one_skill_reuse_trans']
@@ -32,8 +32,8 @@ ALL_DEFINED_COLS = list(set(GROUP_A_COLS + GROUP_B_COLS + GROUP_C_COLS + GROUP_D
 
 
 # List of columns considered 'multi-label' (with tuples)
-MULTI_LABEL_COLUMNS = ['region', 'sector', 'esco_skill', 'esco_broader_skill','esco_skill_type',
-                       'esco_skill_reuse_level','esco_skill_broader_hierarchy',
+MULTI_LABEL_COLUMNS = ['region', 'sector', 'esco_skill','esco_broader_skill_fn','esco_skill_type',
+                       'esco_skill_reuse_level','esco_skill_broader_hierarchy_fn',
                        'type_skill','type_skill2','isco_final','isco_final_1digit','isco_final_skill',
                        'isco_final_label', 'esco_digital_skill','esco_green_skill']
 # Ensure new multi-label variables are included in the initial parsing
